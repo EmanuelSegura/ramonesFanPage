@@ -1,0 +1,487 @@
+/* Reglas generales de diseño para todo el body */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+    width: auto;
+}
+
+
+/* *********** BACKGROUND *********** */
+
+
+/* Fondo de el logo de la banda para que se vea al scrollear en el sitio*/
+
+.background {
+    background-image: url("../img/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    border-bottom: 2px solid white;
+}
+
+
+/* *********** NAVBAR *********** */
+
+ul.botonera {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.menu {
+    width: auto;
+}
+
+.botonera li,
+a {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 25px;
+    margin: 0 25px;
+    color: white;
+}
+
+.botonera li a:hover {
+    transition: all 0.5s ease;
+    background-color: white;
+    color: black;
+}
+
+.logo {
+    align-items: center;
+}
+
+.logo a {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Invierte los colores de la imagen de el header. El original es un .svg con el logo en negro */
+
+#img-header {
+    /* safari 6.0 - 9.0 */
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+
+/* *********** CONTENEDOR *********** */
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contenedorPrincipal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 20px 20px 20px;
+    height: auto;
+    width: auto;
+}
+
+
+/* *********** NOTICIAS *********** */
+
+
+/* Para darle el estilo de columna en el home a las noticias como bloque */
+
+#noticias {
+    flex-direction: column;
+    flex-wrap: no-wrap;
+}
+
+.noticiaIndividual {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.parrafoNoticia {
+    text-align: justify;
+    width: 100%;
+}
+
+
+/* Boton "leer mas" de las Noticias */
+
+.btnLeerMas {
+    color: white;
+    font-weight: bold;
+    font-family: inherit;
+    background-color: transparent;
+    font-size: 1.3em;
+    padding: 15px;
+    margin: 10px 5px 30px 5px;
+    text-transform: uppercase;
+    /* Quita el estilo de el boton */
+    border: none;
+}
+
+.btnLeerMas:hover {
+    transition: all 0.5s ease;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+
+/* *********** FOOTER *********** */
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px 20px 20px 20px;
+}
+
+.derechos {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.media {
+    display: flex;
+    justify-content: center;
+}
+
+.form,
+.formNewsletter {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 100px;
+}
+
+.tituloPrincipalBody {
+    margin: 50px 20px;
+    text-align: center;
+}
+
+
+/* Hacer flex para leer e ingresar captcha */
+
+.captcha {
+    display: flex;
+    justify-content: space-around;
+}
+
+.itemFormulario {
+    margin-bottom: 5px;
+    padding: 5px 5px 5px 5px;
+}
+
+#infoStatus {
+    text-align: center;
+}
+
+.inputNombreFormulario {
+    font-family: inherit;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.inputEmailFormulario {
+    font-family: inherit;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.inputMensajeFormulario {
+    font-family: inherit;
+    padding: 10px 200px 150px 10px;
+    margin-bottom: 20px;
+}
+
+.btnEnviarFormulario,
+.btnNoRobot,
+.btnsTabla {
+    font-family: inherit;
+    padding: 10px;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 1.5rem;
+}
+
+;
+
+/* *********** NEWSLETTER *********** */
+
+
+/* Ajustar newsletter como bloque */
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+}
+
+.itemNewsletter {
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 5px 5px 5px 5px;
+}
+
+span.itemNewsletter {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Para dejar alineado el newsletter con el form */
+
+p {
+    margin: 0;
+}
+
+
+/* *********** LISTA *********** */
+
+.listaDiscos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.listaDiscos li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+}
+
+ul.listaDiscos {
+    /* Quitando valores por defecto de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+
+/* estilo para los parrafos de la info de el disco */
+
+.infoDiscografia p {
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+
+/* Portadas de los discos */
+
+.portada {
+    /* Efecto de transicion en discos con soporte para distintos navegadores */
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    transition: 0.6s ease-in-out;
+    opacity: 0.8;
+}
+
+.portada:hover {
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transform: scale(1.0);
+    transition: 0.2s ease-in-out;
+    opacity: 1;
+}
+
+
+/* *********** TABLA *********** */
+
+
+/* Vuelve flex el div padre de la tabla */
+
+.estiloTabla {
+    display: flex;
+    justify-content: center;
+}
+
+.tabla {
+    padding: 10px;
+}
+
+.filaEspecialTabla {
+    background-color: yellow;
+    color: black;
+}
+
+thead {
+    font-size: 1.2em;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+td {
+    padding: 10px 20px;
+}
+
+.botonesTabla {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Botones font-Awesome */
+
+i {
+    color: white;
+    margin: 10px;
+    font-size: xx-large;
+}
+
+i:hover {
+    color: red;
+    transition: all 0.5s ease;
+}
+
+
+/* Quitar la decoracion a los links */
+
+a {
+    text-decoration: none;
+}
+
+
+/* Quitar estilo por defecto a las listas */
+
+ul {
+    padding: 0;
+}
+
+
+/*************************************/
+
+
+/* MOBILE */
+
+
+/*************************************/
+
+@media screen and (max-width: 660px) {
+    /* *********** HEADER *********** */
+    ul.botonera {
+        display: none;
+        flex-direction: column;
+    }
+    /* si tiene tambien la clase show */
+    ul.botonera.show {
+        display: flex;
+    }
+    .logo {
+        display: flex;
+        justify-content: space-between;
+    }
+    #img-header {
+        width: 20%;
+    }
+    .imgNoticia {
+        width: 100%;
+    }
+    .tituloNoticia {
+        margin: 10px 5px 30px 5px;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .parrafoNoticia {
+        margin: 10px 5px 10px 5px;
+        font-size: 1.1em;
+    }
+    /* *********** CONTACTO Y FORMULARIOS *********** */
+    .contacto {
+        display: flex;
+        flex-direction: column;
+    }
+    #captchaAqui {
+        margin: 5px 0;
+    }
+    /* *********** DISCOGRAFIA *********** */
+    .infoDiscografia p {
+        margin: 5px 50px;
+    }
+    /* Opcion con scroll horizontal propuesta en la lista de emails */
+    .estiloTabla {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+}
+
+
+/*************************************/
+
+
+/* DESKTOP */
+
+
+/*************************************/
+
+@media screen and (min-width: 660px) {
+    /*  */
+    /* HEADER Y NAVBAR */
+    .btn_menu {
+        display: none;
+    }
+    ul.botonera {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .logo {
+        display: flex;
+        justify-content: space-between;
+    }
+    #img-header {
+        width: 100%;
+    }
+    /*  */
+    /* NOTICIAS */
+    .imgNoticia {
+        margin-top: 30px;
+    }
+    .tituloNoticia {
+        margin: 10px 10px 30px 10px;
+        text-align: justify;
+        font-size: 2em;
+    }
+    .parrafoNoticia {
+        margin: 10px 15px 10px 15px;
+        font-size: 1.3em;
+    }
+    /*  */
+    /* CONTACTO Y FORMULARIOS  */
+    .contacto {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #captchaAqui {
+        margin: 5px 5px 0 0;
+    }
+    /*  */
+    /* DISCOGRAFIA  */
+    .infoDiscografia p {
+        margin: 20px 200px;
+    }
+    /* TABLA */
+    .botonesTabla {
+        flex-direction: row;
+        margin-bottom: 10px;
+    }
+}
